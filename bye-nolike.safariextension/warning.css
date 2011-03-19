@@ -1,0 +1,175 @@
+/* @group Buttons Set */
+.zbutton {
+  height: 1.5em;
+  background-color: #fff;
+  color: #000;
+  line-height: 1.5em;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+  padding: 0.15em 1.5em;
+  display: inline-block;
+  -webkit-border-radius: 1em;  
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.7),
+  			inset 0 1px 2px rgba(255,255,255,0.4), 
+  			inset 0 -1em 1.3em rgba(0,0,0,0.3);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.7),
+  			inset 0 1px 2px rgba(255,255,255,0.4), 
+  			inset 0 -1em 1.3em rgba(0,0,0,0.3);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.7),
+  			inset 0 1px 2px rgba(255,255,255,0.4),
+  			inset 0 -1em 0.8em rgba(0,0,0,0.3);
+}
+.zbutton:hover {
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.6),
+  			inset 0 1px 2px rgba(255,255,255,0.3), 
+  			inset 0 -1em 1.3em rgba(0,0,0,0.25);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.6),
+  			inset 0 1px 2px rgba(255,255,255,0.3), 
+  			inset 0 -1em 1.3em rgba(0,0,0,0.25);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.6),
+  			inset 0 1px 2px rgba(255,255,255,0.3), 
+  			inset 0 -1em 0.8em rgba(0,0,0,0.25);
+}
+.zbutton:active {
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.6),
+  			inset 0 1px 2px rgba(255,255,255,0.3), 
+  			inset 0 0.5em 3em rgba(0,0,0,0.3);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.6),
+  			inset 0 1px 2px rgba(255,255,255,0.3), 
+  			inset 0 0.5em 3em rgba(0,0,0,0.3);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.6),
+  			inset 0 1px 2px rgba(255,255,255,0.3), 
+			inset 0 0.5em 3em rgba(0,0,0,0.3);
+}
+
+/* @group Color Schemes */
+
+.zbutton.red {
+  background-color: crimson;
+  color: rgba(255,255,255,.9);
+  text-shadow: 0 -1px rgba(0,0,0,.9);
+}
+.zbutton.yellow {
+  background-color: #e2df12;
+  color: rgba(255,255,255,.9);
+  text-shadow: 0px 0px 3px rgba(0,0,0,.7),
+               -1px -1px 0 rgba(0,0,0,.2);
+  
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.6),
+  			inset 0 1px 2px rgba(255,255,255,0.3),
+  			inset 0 -1em 2em rgba(234,134,38,0.9);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.6),
+  			inset 0 1px 2px rgba(255,255,255,0.3),
+  			inset 0 -1em 2em rgba(234,134,38,0.9);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.6),
+  			inset 0 1px 2px rgba(255,255,255,0.3),
+  			inset 0 -1em 2em rgba(234,134,38,0.9);
+}
+.zbutton.yellow:hover {
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.6),
+  			inset 0 1px 2px rgba(255,255,255,0.3),
+  			inset 0 -1em 2em rgba(234,134,38,0.7);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.6),
+  			inset 0 1px 2px rgba(255,255,255,0.3),
+  			inset 0 -1em 2em rgba(234,134,38,0.7);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.6),
+  			inset 0 1px 2px rgba(255,255,255,0.3),
+  			inset 0 -1em 2em rgba(234,134,38,0.7);
+}
+.zbutton.yellow:active {
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.6),
+  			inset 0 1px 2px rgba(255,255,255,0.3),
+  			inset 0 1.5em 3em rgba(234,134,38,0.9);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.6),
+  			inset 0 1px 2px rgba(255,255,255,0.3),
+  			inset 0 1.5em 3em rgba(234,134,38,0.9);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.6),
+  			inset 0 1px 2px rgba(255,255,255,0.3),
+  			inset 0 1.5em 3em rgba(234,134,38,0.9);
+}
+.zbutton.disabled,
+.zbutton.hover,
+.zbutton.active {
+  background-color: gray;
+  color: #ccc;
+  text-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,0.3);
+  cursor: default;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.7),
+  			inset 0 1px 2px rgba(255,255,255,0.4), 
+  			inset 0 -1em 1.3em rgba(0,0,0,0.3);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.7),
+  			inset 0 1px 2px rgba(255,255,255,0.4), 
+  			inset 0 -1em 1.3em rgba(0,0,0,0.3);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.7),
+  			inset 0 1px 2px rgba(255,255,255,0.4),
+  			inset 0 -1em 0.8em rgba(0,0,0,0.3);
+}
+/* @end */
+/* @end */
+
+html {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.8);
+  display: table;
+}
+body {
+  color: #fff;
+  font: 14px/1.3 sans-serif;
+  display: table-cell;
+  vertical-align: middle;
+}
+article {
+  width: 40em;
+  background: #eeebe5;
+  color: #333;
+  margin: 0 auto;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+article h1 {
+  background: #ffc600 url('images/bkgWarningPattern.svg');
+  background-size: auto 2.1em;
+  color: rgba(255,255,255,.9);
+  font-size: 130%;
+  line-height: 2em;
+  text-align: center;
+  text-shadow: 0 -1px 1px #111, 0 0 0.5em #000;
+  -webkit-box-shadow: inset 0 -1em 1em rgba(0,0,0,.3);
+  margin: 0;
+}
+article div {
+  padding: 1.3em 2.6em;
+}
+
+article p {
+  margin: 0 0 1.3em;
+}
+
+form#searchBox {
+  text-align: center;
+  margin-bottom: 1.3em;
+}
+input[type=search] {
+  width: 70%;
+  font-size: 200%;
+}
+
+p.links {
+  float: left;
+  line-height: 1.8em;
+}
+
+form#crackBox {
+  text-align: right;
+}
+
+form#crackBox a.zbutton {
+  margin-left: 0.65em;
+}

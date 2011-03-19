@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<svg width="240" height="150"
+     xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny">
+
+  <desc>Warring Line Pattern</desc>
+
+  <polygon fill="black" points="120,0 240,0 150,150, 30,150" style="opacity:.75" />
+</svg>
