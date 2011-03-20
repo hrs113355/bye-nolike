@@ -4,6 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>警告：騙「讚」誘導網站</title>
   <link rel="stylesheet" href="warning.css" type="text/css" />
+  <script type="text/javascript" src="javascripts/jquery-1.5.min.js"></script>
 </head>
 
 <body>
@@ -12,7 +13,7 @@
     <div>
       <p>您正在瀏覽的網頁內容包含了要求您先按下「讚」才能閱讀內容的誘導機制。這可能會導致您的身分被用作非您本意的推薦，並被網站利用為騙取信任、流量與廣告的工具。</p>
       <p>為了避免您被網站強迫點「讚」，您可以利用下方的搜尋框在網路上搜尋是否有其他網站提供相同內容。或者您也可以選擇嘗試解除此網站上的騙「讚」機制。</p>
-      <form id="searchBox" action="http://www.google.com/" method="GET">
+      <form id="searchBox" action="http://www.google.com/search" method="GET" target="_top">
         <input type="search" id="q" name="q" placeholder="Google" results="0" />
       </form>
       <p class="links"><a href="#">更多資訊</a></p>
@@ -24,6 +25,7 @@
       </form>
     </div>
   </article>
+
 </body>
 
 </html>
