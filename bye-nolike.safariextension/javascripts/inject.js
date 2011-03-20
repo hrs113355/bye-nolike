@@ -37,7 +37,7 @@ function displayAlert(crackable) {
       width: '100%', height: '100%', border: 'none',
       position: 'fixed', top: 0, left: 0, zIndex: 9999
     })
-    .attr('id', 'by_nolike_warning')
+    .attr('id', 'bye_nolike_warning')
     .attr('src', baseURI + 'warning.html?title=' + document.title + (crackable ? '' : '&crackable=false') )
     .appendTo($('body'));
 }
