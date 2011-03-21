@@ -2,9 +2,9 @@
 .zbutton {
   height: 1.5em;
   background-color: #fff;
-  color: #000;
+  color: #111 !important;
   line-height: 1.5em;
-  text-decoration: none;
+  text-decoration: none !important;
   text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
   padding: 0.15em 1.5em;
   display: inline-block;
@@ -26,6 +26,7 @@
   			inset 0 -1em 0.8em rgba(0,0,0,0.3);
 }
 .zbutton:hover {
+  color: #111 !important;
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.6),
   			inset 0 1px 2px rgba(255,255,255,0.3), 
   			inset 0 -1em 1.3em rgba(0,0,0,0.25);
@@ -52,12 +53,15 @@
 
 .zbutton.red {
   background-color: crimson;
-  color: rgba(255,255,255,.9);
+  color: rgba(255,255,255,.9) !important;
   text-shadow: 0 -1px rgba(0,0,0,.9);
+}
+.zbutton.red:hover {
+  color: inherit;
 }
 .zbutton.yellow {
   background-color: #e2df12;
-  color: rgba(255,255,255,.9);
+  color: rgba(255,255,255,.9) !important;
   text-shadow: 0px 0px 3px rgba(0,0,0,.7),
                -1px -1px 0 rgba(0,0,0,.2);
   
@@ -113,27 +117,40 @@
 /* @end */
 /* @end */
 
-html {
+.nl-c {
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,.8);
+  margin: 0;
+  padding: 0;
   display: table;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
 }
-body {
+
+.nl-c a {
+  color: #0c4fc0;
+}
+
+.nl-c > div {
   color: #fff;
   font: 14px/1.3 sans-serif;
   display: table-cell;
   vertical-align: middle;
 }
-article {
+.nl-c article {
   width: 40em;
   background: #eeebe5;
   color: #333;
   margin: 0 auto;
+  border: 1px solid rgba(0,0,0,.4);
   border-radius: 0.5em;
+  -webkit-box-shadow: 0 0.5em 0.5em rgba(0,0,0,.5);
   overflow: hidden;
 }
-article h1 {
+.nl-c article h1 {
   background: #ffc600 url('images/bkgWarningPattern.svg');
   background-size: auto 2.1em;
   color: rgba(255,255,255,.9);
@@ -144,32 +161,32 @@ article h1 {
   -webkit-box-shadow: inset 0 -1em 1em rgba(0,0,0,.3);
   margin: 0;
 }
-article div {
+.nl-c article div {
   padding: 1.3em 2.6em;
 }
 
-article p {
+.nl-c article p {
   margin: 0 0 1.3em;
 }
 
-form#searchBox {
+.nl-c article form#searchBox {
   text-align: center;
-  margin-bottom: 1.3em;
+  margin-bottom: 2.6em;
 }
-input[type=search] {
+.nl-c article input[type=search] {
   width: 70%;
   font-size: 200%;
 }
 
-p.links {
+.nl-c article p.links {
   float: left;
   line-height: 1.8em;
 }
 
-form#crackBox {
+.nl-c article form#crackBox {
   text-align: right;
 }
 
-form#crackBox a.zbutton {
+.nl-c article form#crackBox .zbutton {
   margin-left: 0.65em;
 }
