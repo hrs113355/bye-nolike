@@ -22,6 +22,7 @@
           總是嘗試破解此網站
         </label>
         <a class="zbutton red" href="#">嘗試破解</a>
+        <a id="btnIgnore" class="zbutton" href="#">忽略警告</a>
       </form>
     </div>
   </article>
@@ -31,12 +32,15 @@
     $('#crackBox a.zbutton').click(function(e) {
       e.preventDefault();
     });
+    $('a#btnIgnore').click(function() {      
+      window.parent.document.querySelector('body').removeChild(window.parent.document.querySelector('iframe#bye_nolike_warning'));
+    });
     
     document.querySelector('#searchBox #q').value = decodeURIComponent(queryTitle);
 
     if(location.search.match('crackable=false')) {
       $('#crackBox label, .crackable').remove();
-      $('#crackBox a.zbutton')
+      $('#crackBox a.red')
         .text('帶我離開這裡')
         .click(function(e) {
           document.forms.searchBox.submit();
