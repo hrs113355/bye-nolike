@@ -8,6 +8,8 @@
 </head>
 
 <body>
+<div class="nl-c">
+<div>
   <article>
     <h1 title="警告：騙「讚」誘導網站">警告：騙「讚」誘導網站</h1>
     <div>
@@ -19,34 +21,15 @@
       <p class="links"><a href="#">更多資訊</a></p>
       <form id="crackBox">
         <label><input type="checkbox" id="alwaysCrack" />
-          總是嘗試破解此網站
+          總是嘗試移除此網站的誘導機制
         </label>
-        <a class="zbutton red" href="#">嘗試破解</a>
-        <a id="btnIgnore" class="zbutton" href="#">忽略警告</a>
+        <a class="zbutton red" href="#">嘗試移除</a>
+        <a id="btnIgnore" class="zbutton" href="#">忽略</a>
       </form>
     </div>
   </article>
-  <script>
-    var queryTitle = location.search.match(/title=([^\&]*)/)[1];
-    
-    $('#crackBox a.zbutton').click(function(e) {
-      e.preventDefault();
-    });
-    $('a#btnIgnore').click(function() {      
-      window.parent.document.querySelector('body').removeChild(window.parent.document.querySelector('iframe#bye_nolike_warning'));
-    });
-    
-    document.querySelector('#searchBox #q').value = decodeURIComponent(queryTitle);
-
-    if(location.search.match('crackable=false')) {
-      $('#crackBox label, .crackable').remove();
-      $('#crackBox a.red')
-        .text('帶我離開這裡')
-        .click(function(e) {
-          document.forms.searchBox.submit();
-        }); 
-    }
-  </script>
+</div>
+</div>
 </body>
 
 </html>
