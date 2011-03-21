@@ -7,6 +7,6 @@
 if (document.URL.match(/ideapit.net/)){
     change();
 }
-else if (!(document.URL.match(/?display=true/))){
+else if (!(document.URL.match(/\?display=true/))){
     location.replace(document.URL+'?display=true');
 }
