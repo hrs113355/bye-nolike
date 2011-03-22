@@ -20,6 +20,12 @@ function needLikeToRead() {
         return true;
         break;
       }
+    case 'zhquiz.myshareshare.com':
+    case 'lovetalk.mypagediy.com':
+      if($('div#hidden-dialog').length > 0) {
+        return true;
+        break;
+      }
     default:
       return false;
       break;
