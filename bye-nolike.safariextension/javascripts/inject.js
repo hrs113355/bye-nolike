@@ -32,7 +32,14 @@ function needLikeToRead() {
   }
 }
 
-function injectWarningWindow() {
+function injectWarningWindow(crackableFlag) {
+
+  /* Initialze params */
+  
+  crackableFlag = crackableFlag || 'uncrackable';
+
+  /* Injected window template */
+  
   var inject = [
     $('<p>您正在瀏覽的網頁內容包含了要求您先按下「讚」才能閱讀內容的誘導機制。這可能會導致您的身分被用作非您本意的推薦，並被網站利用為騙取信任、流量與廣告的工具。</p><p>為了避免您被網站強迫點「讚」，您可以利用下方的搜尋框在網路上搜尋是否有其他網站提供相同內容。<span class="crackable">或者您也可以選擇嘗試解除此網站上的騙「讚」機制。</span></p>'),
     $('<form id="searchBox" action="http://www.google.com/search" method="GET" target="_top"></form>')
@@ -41,6 +48,8 @@ function injectWarningWindow() {
     $('<form id="crackBox"><label><input type="checkbox" id="alwaysCrack" />總是嘗試破解此網站</label><a class="zbutton red" href="#">嘗試破解</a><a id="btnIgnore" class="zbutton" href="#">忽略警告</a></form>')
   ]
   var result = $('<div>');
+  
+  /* Local functions */
   
   var initializeWarningWindow = function() {
     var queryTitle = document.title;
@@ -56,6 +65,15 @@ function injectWarningWindow() {
         .click(function(e) {
           document.querySelector('.nl-c #searchBox').submit();
         }); 
+    } else {
+      $('#crackBox a.red').click(function(e) {
+          var crackScript = document.createElement('script');
+          crackScript.src = baseURI + 'javascripts/main.js';
+          document.querySelector('body').appendChild(crackScript);
+          
+          removeWarningWindow();
+      });
+      $('.nl-c #crackBox label').remove(); /* Not yet implemented */
     }
 
   };
@@ -65,8 +83,16 @@ function injectWarningWindow() {
   };
   
   var isLikeCrackable = function() {
-    return false;
+    if(crackableFlag === true) {
+      return true;
+    } else if(crackableFlag === 'uncrackable') {
+      return false;
+    } else {
+      return false;
+    }
   };
+  
+  /* Start to inject warning window */
   
   $.each(inject, function(index, item) {
     result.append(item);
@@ -80,15 +106,19 @@ function injectWarningWindow() {
       )
     ).appendTo('body');
   $('<link rel="stylesheet" href="' + baseURI + 'warning.css" type="text/css" />').appendTo('head');
-    
+  
+  /* Init warning window after injection */
+  
   initializeWarningWindow();
   
 }
 
 /* Check if warning should be displayed */
 
-if(needLikeToRead()) {
-  injectWarningWindow();
+var injectFlag = needLikeToRead();
+
+if(injectFlag !== false) {
+  injectWarningWindow(injectFlag);
 }
 
 }
