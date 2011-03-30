@@ -8,7 +8,7 @@ if (document.URL.match(/ideapit.net/)){
     change();
 }
 else if (document.URL.match(/zhquiz\.myshareshare\.com/) || document.URL.match(/lovetalk\.mypagediy\.com/)){
-    $("#hidden-content").show();
+    $("#hidden-content").show("slow");
 }
 else if (!(document.URL.match(/\?display=true/))){
     location.replace(document.URL+'?display=true');
