@@ -37,6 +37,8 @@
 			<string>http://tenkucity.com/*.html</string>
 			<string>http://citytalk.tw/sns/forum.php</string>
 			<string>http://ideapit.net/*</string>
+			<string>http://lovetalk.mypagediy.com/*</string>
+			<string>http://zhquiz.myshareshare.com/*</string>
 		</array>
 	</dict>
 	<key>Description</key>
@@ -52,6 +54,8 @@
 				<string>ideapit.net</string>
 				<string>citytalk.tw</string>
 				<string>tenkucity.com</string>
+				<string>lovetalk.mypagediy.com</string>
+				<string>zhquiz.myshareshare.com</string>
 			</array>
 			<key>Include Secure Pages</key>
 			<true/>

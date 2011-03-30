@@ -4,15 +4,13 @@
  * To Public License, Version 2, as published by Sam Hocevar. See
  * http://sam.zoy.org/wtfpl/COPYING for more details. */
 
-if(typeof(pid)== "number"){ajaxget('forum.php?mod=viewthread&show=true&tid=' + tid + '&viewpid=' + pid, 'post_' + pid);}
-else if (document.URL.match(/ideapit.net/)){
+if (document.URL.match(/ideapit.net/)){
     change();
 }
-else if (!(document.URL.match(/&show=true/))){
-    location.replace(document.URL+'&show=true');
+else if (document.URL.match(/zhquiz\.myshareshare\.com/) || document.URL.match(/lovetalk\.mypagediy\.com/)){
+    $("#hidden-content").show();
 }
-
-
-http://tenkucity.com/ - Discuz Plugin
-ajaxget("forum.php?mod=viewthread&display=true&tid=5682&viewpid=1634285","post_1634285")
+else if (!(document.URL.match(/\?display=true/))){
+    location.replace(document.URL+'?display=true');
+}
 
