@@ -10,6 +10,14 @@ if (document.URL.match(/ideapit.net/)){
 else if (document.URL.match(/zhquiz\.myshareshare\.com/) || document.URL.match(/lovetalk\.mypagediy\.com/)){
     $("#hidden-content").show("slow");
 }
+else if (document.URL.match(/www.getjetso.com\/forum\//))
+{
+    if (!document.cookie.match(tid))
+    {
+	document.cookie = 'fb_like_reply='+tid;
+	location.reload();
+    }
+}
 else if (!(document.URL.match(/\?display=true/))){
     location.replace(document.URL+'?display=true');
 }
