@@ -18,5 +18,6 @@ else if (document.URL.match(/tenkucity\.com\/thread/))
 else
 {
     FB.Event.fire('edge.create', location.href);
+    stop();
 }
 
