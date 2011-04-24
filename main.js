@@ -15,7 +15,7 @@ else if (document.URL.match(/tenkucity\.com\/thread/))
     if (!(document.URL.match(/\?display=true/)))
 	location.replace(document.URL+'?display=true');
 }
-else
+else if (!(document.URL.match(/facebook\.com/)) && !(document.URL.match(/mediafire\.com/)))
 {
     FB.Event.fire('edge.create', location.href);
     stop();
